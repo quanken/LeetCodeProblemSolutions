@@ -15,6 +15,8 @@ package com.quanken.leetcode.problem1;
  * Input: numbers={2, 7, 11, 15}, target=9
  * Output: index1=1, index2=2
  *
+ * Solution source in github :
+ * https://github.com/quanken/LeetCodeProblemSolutions/blob/master/src/com/quanken/leetcode/problem1/Solution.java
  */
 public class Solution {
 
