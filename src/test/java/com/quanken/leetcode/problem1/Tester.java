@@ -1,25 +1,38 @@
 package com.quanken.leetcode.problem1;
 
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
 /**
- * A Test Case to Solution 1
- * Created by quanken on 2014/12/26.
+ * Test Case to Solution 1 : Two Sum
  */
-public class SolutionTester {
+public class Tester{
 
-    public static void main(String[] args){
-        int[] numbers = {2, 5, 7, 8, 10, 11, 15, 20};
-        int[] target = new int[]{
-                2,  // the target is less that min value in array
-                7,  // the target is valid
-                24, // the target could not find solution
-                40  // the target is not valid since two index shouldn't be equal
+    int[] numbers;
+    int[] target;
+
+    Solution solution;
+
+    @Before
+    public void setup(){
+        numbers = new int[]{2, 5, 7, 8, 10, 11, 15, 20};
+        target = new int[]{
+            2,  // the target is less that min value in array
+            7,  // the target is valid
+            24, // the target could not find solution
+            40  // the target is not valid since two index shouldn't be equal
         };
-        Solution s = new Solution();
-        for(int t:target){
-            int[] results = s.twoSum(numbers, t);
-            printResults(numbers, t, results);
-        }
+        solution = new Solution();
+    }
 
+    @Test
+    public void test(){
+        for(int t:target){
+            int[] results = solution.twoSum(numbers, t);
+            printResults(numbers, t, results);
+            Assert.assertTrue((results == null || results.length == 2));
+        }
     }
 
     /**
