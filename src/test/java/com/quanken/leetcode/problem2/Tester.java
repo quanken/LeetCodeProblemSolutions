@@ -15,9 +15,9 @@ public class Tester {
 
     @Before
     public void setup() {
-        i1 = new Integer[]{6, 4,  3};
-        i2 = new Integer[]{5, 6,  4};
-        r = new Integer[]{1, 1,  8};
+        i1 = new Integer[]{6, 4,  3, 7};
+        i2 = new Integer[]{5, 6,  4, 2};
+        r = new Integer[]{1, 1,  8, 9};
     }
 
     @Test
