@@ -21,6 +21,6 @@ elif [ ! -e "src/test/java/com/quanken/leetcode/problem$problem_number/Tester.ja
 else
     testcase="com.quanken.leetcode.problem$problem_number.Tester"
     echo "Running TestCase: $testcase"
-    gradle test --tests $testcase
+    gradle cleanTest test --tests $testcase --debug
 fi
 
