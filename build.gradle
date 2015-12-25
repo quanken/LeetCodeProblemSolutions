@@ -9,3 +9,9 @@ repositories {
 dependencies {
 	testCompile 'junit:junit:4.12'
 }
+
+tasks.withType(Test) {
+    testLogging.events "passed", "failed", "skipped"
+    testLogging.showStandardStreams = true
+    testLogging.showExceptions = true
+}
