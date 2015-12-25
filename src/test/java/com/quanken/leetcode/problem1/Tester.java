@@ -30,7 +30,6 @@ public class Tester{
     public void test(){
         for(int t:target){
             int[] results = solution.twoSum(numbers, t);
-            printResults(numbers, t, results);
             Assert.assertTrue((results == null || results.length == 2));
         }
     }
